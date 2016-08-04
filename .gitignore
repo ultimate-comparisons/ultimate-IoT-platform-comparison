@@ -1,0 +1,12 @@
+node_modules
+www/
+id_rsa
+id_rsa.pub
+*.iml
+npm*.log
+/typings/
+/app/**/*.js.map
+/app/**/*.js
+.vscode/
+/comparison-elements-json/*.json
+/app/components/comparison/data/data.json
