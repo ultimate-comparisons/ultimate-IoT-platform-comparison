@@ -12,8 +12,21 @@ comparison {
     overflow: hidden;
 }
 
+comparison-details {
+    display: block;
+    padding: 0;
+}
+
 .container {
     padding-bottom: 50px; 
+}
+
+.description > :first-child  {
+    margin-top : 0;
+}
+
+.description > :last-child {
+    margin-bottom: 0;
 }
 
 .mylabel {
