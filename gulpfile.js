@@ -8,7 +8,9 @@ var gulp = require('gulp'),
     concatjson = require('gulp-concat-json'),
     run = require('run-sequence'),
     exec = require('gulp-exec'),
-    tsConfig = require('./tsconfig');
+    tsConfig = require('./tsconfig'),
+    bibtex2json = require('./citation/bibtex2json'),
+    fs = require('fs');
 
 var paths = {
     src: 'app',
@@ -37,7 +39,8 @@ var files = {
     ],
     data: [
         './app/components/comparison/data/*.json',
-        './comparison-configuration/*'
+        './comparison-configuration/*',
+        './citation/output/*'
     ],
     markdown: [
         './comparison-elements/*.md'
@@ -58,7 +61,8 @@ var files = {
         './node_modules/file-saver/**/*js',
         './node_modules/showdown/**/*.js',
         './node_modules/npm-polymer-elements/**/*',
-         "./node_modules/@vaadin/angular2-polymer/**/*"
+         "./node_modules/@vaadin/angular2-polymer/**/*",
+         "./node_modules/angular2-select/**/*"
     ]
 }
 
@@ -112,6 +116,11 @@ gulp.task('json', function(){
             return data;
         }, 2))
         .pipe(gulp.dest(paths.data))
+})
+
+gulp.task('citation', function(){
+    var fileContent = JSON.parse(fs.readFileSync("./citation/config.json", "utf8"));
+    bibtex2json.parse('./citation/' + fileContent.bibtex_file, 'utf8', './citation/' + fileContent.bibtex_style, './citation/output');
 })
 // --------------------------------------------------------------->
 
