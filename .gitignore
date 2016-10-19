@@ -13,3 +13,5 @@ npm*.log
 .gradle
 /tmp/
 /citation/output/
+/pandoc*/
+pandoc*
