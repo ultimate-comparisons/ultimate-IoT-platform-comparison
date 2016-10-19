@@ -57,11 +57,10 @@ var extractFormatedKeys = function(filepath){
 
 var extractFormatedBib = function(filepath){
     var htmlfile = fs.readFileSync('./tmp/keys.html', 'utf8');
-    console.log(htmlfile);
     var regex = /(<div id="refs" class="references">[\w\W]*<\/div>)/m;
     var match = regex.exec(htmlfile);
     var result = match ? match[0] : "";
-    console.log(result);
+    
     regex = /(?:<div id="ref-)(.*)(?:">)([\W\w]*?)(?:<\/div>)/gm;
     match = regex.exec(result);
     var filecontent = "{\n";
@@ -70,7 +69,7 @@ var extractFormatedBib = function(filepath){
         filecontent += line + '\n';
         match = regex.exec(result);
     }
-    filecontent = filecontent.substr(0,filecontent.length) + "\n}";
+    filecontent = filecontent.substr(0,filecontent.length-2) + "\n}";
     
     if(!fs.existsSync(filepath)) fs.mkdirSync(filepath);
     return fs.writeFile(filepath + "/fbib.json", filecontent, function(err) {if(err) return console.log(err);});    
