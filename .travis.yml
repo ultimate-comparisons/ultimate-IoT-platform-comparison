@@ -1,0 +1,28 @@
+language: node_js
+node_js:
+- '6'
+env:
+- GIT_DEPLOY_DIR: www
+script: npm test
+after_success:
+- git remote set-url origin git@github.com:kleinech/ultimate-IoT-platform-comparison.git
+- openssl aes-256-cbc -K $encrypted_5b86093bd512_key -iv $encrypted_5b86093bd512_iv -in id_rsa.enc -out id_rsa -d
+- eval "$(ssh-agent -s)"
+- chmod 600 id_rsa
+- ssh-add id_rsa
+- "./deploy.sh"
+before_install:
+- wget https://github.com/jgm/pandoc/releases/download/1.17.2/pandoc-1.17.2-1-amd64.deb
+- sudo dpkg -i pandoc-1.17.2-1-amd64.deb
+- rm pandoc-1.17.2-1-amd64.deb
+- npm install -g npm
+- java -version
+- pandoc -v
+- npm -version
+- npm install
+branches:
+  only:
+  - master
+  - development
+sudo: required
+dist: trusty

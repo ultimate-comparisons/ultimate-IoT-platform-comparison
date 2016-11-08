@@ -1,0 +1,11 @@
+{
+    "title": "Ultimate-IoT-platform-comparison",
+    "subtitle": "IoT Platform Comparison",
+    "selecttitle": "Criteria",
+    "tabletitle": "Platforms",
+    "details": {
+        "body-main-title": "Description",
+        "body": "Description"
+    },
+    "repository": "https://github.com/kleinech/ultimate-IoT-platform-comparison.git"
+}
