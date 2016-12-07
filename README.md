@@ -1,6 +1,6 @@
 # Ultimate IoT Platform Comparison
 
-[![Build Status](https://travis-ci.com/kleinech/ultimate-IoT-platform-comparison.svg?token=cEigpEzpNem5544rTY2m&branch=master)](https://travis-ci.com/kleinech/ultimate-IoT-platform-comparison)
+[![Build Status](https://travis-ci.org/ultimate-comparisons/ultimate-IoT-platform-comparison.svg?branch=master)](https://travis-ci.org/ultimate-comparisons/ultimate-IoT-platform-comparison)
 
 This is an ultimate comparison of IoT platforms.
 
