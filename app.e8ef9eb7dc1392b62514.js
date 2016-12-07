@@ -872,7 +872,7 @@ webpackJsonp([0],[
 /* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_RESULT__;;/*! showdown 02-11-2016 */
+	var __WEBPACK_AMD_DEFINE_RESULT__;;/*! showdown 01-12-2016 */
 	(function(){
 	/**
 	 * Created by Tivie on 13-07-2015.
@@ -912,6 +912,11 @@ webpackJsonp([0],[
 	      describe: 'Turn on/off GFM autolink style',
 	      type: 'boolean'
 	    },
+	    excludeTrailingPunctuationFromURLs: {
+	      defaultValue: false,
+	      describe: 'Excludes trailing punctuation from links generated with autoLinking',
+	      type: 'boolean'
+	    },
 	    literalMidWordUnderscores: {
 	      defaultValue: false,
 	      describe: 'Parse midword underscores as literal underscores',
@@ -949,7 +954,17 @@ webpackJsonp([0],[
 	    },
 	    smartIndentationFix: {
 	      defaultValue: false,
-	      description: 'Tries to smartly fix identation in es6 strings',
+	      description: 'Tries to smartly fix indentation in es6 strings',
+	      type: 'boolean'
+	    },
+	    disableForced4SpacesIndentedSublists: {
+	      defaultValue: false,
+	      description: 'Disables the requirement of indenting nested sublists by 4 spaces',
+	      type: 'boolean'
+	    },
+	    simpleLineBreaks: {
+	      defaultValue: false,
+	      description: 'Parses simple line breaks as <br> (GFM Style)',
 	      type: 'boolean'
 	    }
 	  };
@@ -976,15 +991,18 @@ webpackJsonp([0],[
 	    globalOptions = getDefaultOpts(true),
 	    flavor = {
 	      github: {
-	        omitExtraWLInCodeBlocks:   true,
-	        prefixHeaderId:            'user-content-',
-	        simplifiedAutoLink:        true,
-	        literalMidWordUnderscores: true,
-	        strikethrough:             true,
-	        tables:                    true,
-	        tablesHeaderId:            true,
-	        ghCodeBlocks:              true,
-	        tasklists:                 true
+	        omitExtraWLInCodeBlocks:              true,
+	        prefixHeaderId:                       'user-content-',
+	        simplifiedAutoLink:                   true,
+	        excludeTrailingPunctuationFromURLs:   true,
+	        literalMidWordUnderscores:            true,
+	        strikethrough:                        true,
+	        tables:                               true,
+	        tablesHeaderId:                       true,
+	        ghCodeBlocks:                         true,
+	        tasklists:                            true,
+	        disableForced4SpacesIndentedSublists: true,
+	        simpleLineBreaks:                     true
 	      },
 	      vanilla: getDefaultOpts(true)
 	    };
@@ -2047,9 +2065,10 @@ webpackJsonp([0],[
 	
 	  text = globals.converter._dispatch('autoLinks.before', text, options, globals);
 	
-	  var simpleURLRegex  = /\b(((https?|ftp|dict):\/\/|www\.)[^'">\s]+\.[^'">\s]+)(?=\s|$)(?!["<>])/gi,
+	  var simpleURLRegex  = /\b(((https?|ftp|dict):\/\/|www\.)[^'">\s]+\.[^'">\s]+)()(?=\s|$)(?!["<>])/gi,
+	      simpleURLRegex2 = /\b(((https?|ftp|dict):\/\/|www\.)[^'">\s]+\.[^'">\s]+?)([.!?()]?)(?=\s|$)(?!["<>])/gi,
 	      delimUrlRegex   = /<(((https?|ftp|dict):\/\/|www\.)[^'">\s]+)>/gi,
-	      simpleMailRegex = /(?:^|\s)([A-Za-z0-9!#$%&'*+-/=?^_`\{|}~\.]+@[-a-z0-9]+(\.[-a-z0-9]+)*\.[a-z]+)(?:$|\s)/gi,
+	      simpleMailRegex = /(?:^|\s)([A-Za-z0-9!#$%&'*+-/=?^_`{|}~.]+@[-a-z0-9]+(\.[-a-z0-9]+)*\.[a-z]+)(?:$|\s)/gi,
 	      delimMailRegex  = /<(?:mailto:)?([-.\w]+@[-a-z0-9]+(\.[-a-z0-9]+)*\.[a-z]+)>/gi;
 	
 	  text = text.replace(delimUrlRegex, replaceLink);
@@ -2058,20 +2077,28 @@ webpackJsonp([0],[
 	  // Email addresses: <address@domain.foo>
 	
 	  if (options.simplifiedAutoLink) {
-	    text = text.replace(simpleURLRegex, replaceLink);
+	    if (options.excludeTrailingPunctuationFromURLs) {
+	      text = text.replace(simpleURLRegex2, replaceLink);
+	    } else {
+	      text = text.replace(simpleURLRegex, replaceLink);
+	    }
 	    text = text.replace(simpleMailRegex, replaceMail);
 	  }
 	
-	  function replaceLink(wm, link) {
-	    var lnkTxt = link;
+	  function replaceLink(wm, link, m2, m3, trailingPunctuation) {
+	    var lnkTxt = link,
+	        append = '';
 	    if (/^www\./i.test(link)) {
 	      link = link.replace(/^www\./i, 'http://www.');
 	    }
-	    return '<a href="' + link + '">' + lnkTxt + '</a>';
+	    if (options.excludeTrailingPunctuationFromURLs && trailingPunctuation) {
+	      append = trailingPunctuation;
+	    }
+	    return '<a href="' + link + '">' + lnkTxt + '</a>' + append;
 	  }
 	
-	  function replaceMail(wholeMatch, m1) {
-	    var unescapedStr = showdown.subParser('unescapeSpecialChars')(m1);
+	  function replaceMail(wholeMatch, mail) {
+	    var unescapedStr = showdown.subParser('unescapeSpecialChars')(mail);
 	    return showdown.subParser('encodeEmailAddress')(unescapedStr);
 	  }
 	
@@ -2825,11 +2852,19 @@ webpackJsonp([0],[
 	    // attacklab: add sentinel to emulate \z
 	    listStr += '~0';
 	
-	    var rgx = /(\n)?(^[ \t]*)([*+-]|\d+[.])[ \t]+((\[(x|X| )?])?[ \t]*[^\r]+?(\n{1,2}))(?=\n*(~0|\2([*+-]|\d+[.])[ \t]+))/gm,
+	    var rgx = /(\n)?(^ {0,3})([*+-]|\d+[.])[ \t]+((\[(x|X| )?])?[ \t]*[^\r]+?(\n{1,2}))(?=\n*(~0| {0,3}([*+-]|\d+[.])[ \t]+))/gm,
 	        isParagraphed = (/\n[ \t]*\n(?!~0)/.test(listStr));
+	
+	    // Since version 1.5, nesting sublists requires 4 spaces (or 1 tab) indentation,
+	    // which is a syntax breaking change
+	    // activating this option reverts to old behavior
+	    if (options.disableForced4SpacesIndentedSublists) {
+	      rgx = /(\n)?(^ {0,3})([*+-]|\d+[.])[ \t]+((\[(x|X| )?])?[ \t]*[^\r]+?(\n{1,2}))(?=\n*(~0|\2([*+-]|\d+[.])[ \t]+))/gm;
+	    }
 	
 	    listStr = listStr.replace(rgx, function (wholeMatch, m1, m2, m3, m4, taskbtn, checked) {
 	      checked = (checked && checked.trim() !== '');
+	
 	      var item = showdown.subParser('outdent')(m4, options, globals),
 	          bulletStyle = '';
 	
@@ -2845,6 +2880,7 @@ webpackJsonp([0],[
 	          return otp;
 	        });
 	      }
+	
 	      // m1 - Leading line or
 	      // Has a double return (multi paragraph) or
 	      // Has sublist
@@ -2886,10 +2922,11 @@ webpackJsonp([0],[
 	   */
 	  function parseConsecutiveLists(list, listType, trimTrailing) {
 	    // check if we caught 2 or more consecutive lists by mistake
-	    // we use the counterRgx, meaning if listType is UL we look for UL and vice versa
-	    var counterRxg = (listType === 'ul') ? /^ {0,2}\d+\.[ \t]/gm : /^ {0,2}[*+-][ \t]/gm,
-	      subLists = [],
-	      result = '';
+	    // we use the counterRgx, meaning if listType is UL we look for OL and vice versa
+	    var olRgx = (options.disableForced4SpacesIndentedSublists) ? /^ ?\d+\.[ \t]/gm : /^ {0,3}\d+\.[ \t]/gm,
+	        ulRgx = (options.disableForced4SpacesIndentedSublists) ? /^ ?[*+-][ \t]/gm : /^ {0,3}[*+-][ \t]/gm,
+	        counterRxg = (listType === 'ul') ? olRgx : ulRgx,
+	        result = '';
 	
 	    if (list.search(counterRxg) !== -1) {
 	      (function parseCL(txt) {
@@ -2900,7 +2937,7 @@ webpackJsonp([0],[
 	
 	          // invert counterType and listType
 	          listType = (listType === 'ul') ? 'ol' : 'ul';
-	          counterRxg = (listType === 'ul') ? /^ {0,2}\d+\.[ \t]/gm : /^ {0,2}[*+-][ \t]/gm;
+	          counterRxg = (listType === 'ul') ? olRgx : ulRgx;
 	
 	          //recurse
 	          parseCL(txt.slice(pos));
@@ -2908,9 +2945,6 @@ webpackJsonp([0],[
 	          result += '\n<' + listType + '>\n' + processListItems(txt, !!trimTrailing) + '</' + listType + '>\n';
 	        }
 	      })(list);
-	      for (var i = 0; i < subLists.length; ++i) {
-	
-	      }
 	    } else {
 	      result = '\n<' + listType + '>\n' + processListItems(list, !!trimTrailing) + '</' + listType + '>\n';
 	    }
@@ -2922,21 +2956,20 @@ webpackJsonp([0],[
 	  // http://bugs.webkit.org/show_bug.cgi?id=11231
 	  text += '~0';
 	
-	  // Re-usable pattern to match any entire ul or ol list:
-	  var wholeList = /^(( {0,3}([*+-]|\d+[.])[ \t]+)[^\r]+?(~0|\n{2,}(?=\S)(?![ \t]*(?:[*+-]|\d+[.])[ \t]+)))/gm;
-	
 	  if (globals.gListLevel) {
-	    text = text.replace(wholeList, function (wholeMatch, list, m2) {
-	      var listType = (m2.search(/[*+-]/g) > -1) ? 'ul' : 'ol';
-	      return parseConsecutiveLists(list, listType, true);
-	    });
+	    text = text.replace(/^(( {0,3}([*+-]|\d+[.])[ \t]+)[^\r]+?(~0|\n{2,}(?=\S)(?![ \t]*(?:[*+-]|\d+[.])[ \t]+)))/gm,
+	      function (wholeMatch, list, m2) {
+	        var listType = (m2.search(/[*+-]/g) > -1) ? 'ul' : 'ol';
+	        return parseConsecutiveLists(list, listType, true);
+	      }
+	    );
 	  } else {
-	    wholeList = /(\n\n|^\n?)(( {0,3}([*+-]|\d+[.])[ \t]+)[^\r]+?(~0|\n{2,}(?=\S)(?![ \t]*(?:[*+-]|\d+[.])[ \t]+)))/gm;
-	    text = text.replace(wholeList, function (wholeMatch, m1, list, m3) {
-	
-	      var listType = (m3.search(/[*+-]/g) > -1) ? 'ul' : 'ol';
-	      return parseConsecutiveLists(list, listType);
-	    });
+	    text = text.replace(/(\n\n|^\n?)(( {0,3}([*+-]|\d+[.])[ \t]+)[^\r]+?(~0|\n{2,}(?=\S)(?![ \t]*(?:[*+-]|\d+[.])[ \t]+)))/gm,
+	      function (wholeMatch, m1, list, m3) {
+	        var listType = (m3.search(/[*+-]/g) > -1) ? 'ul' : 'ol';
+	        return parseConsecutiveLists(list, listType, false);
+	      }
+	    );
 	  }
 	
 	  // strip sentinel
@@ -3075,8 +3108,14 @@ webpackJsonp([0],[
 	  text = showdown.subParser('italicsAndBold')(text, options, globals);
 	  text = showdown.subParser('strikethrough')(text, options, globals);
 	
-	  // Do hard breaks:
-	  text = text.replace(/  +\n/g, ' <br />\n');
+	  // Do hard breaks
+	
+	  // GFM style hard breaks
+	  if (options.simpleLineBreaks) {
+	    text = text.replace(/\n/g, '<br />\n');
+	  } else {
+	    text = text.replace(/  +\n/g, '<br />\n');
+	  }
 	
 	  text = globals.converter._dispatch('spanGamut.after', text, options, globals);
 	  return text;
@@ -10767,4 +10806,4 @@ webpackJsonp([0],[
 
 /***/ }
 ]);
-//# sourceMappingURL=app.fed48ecb16fe150238dd.js.map
+//# sourceMappingURL=app.e8ef9eb7dc1392b62514.js.map
