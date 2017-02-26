@@ -13,10 +13,17 @@
 
 .card-content {
     padding: 0 16 16 16;
-    position:relative;
+    position: relative;
 }
 
-pcard >>> .paper-header {
+pcard /deep/ .paper-header {
     font-size: 18px;
 }
 
+.tooltip-text {
+    display: inline-table;
+}
+
+.tooltip-text /deep/ ul {
+    padding-left: 15px;
+}
