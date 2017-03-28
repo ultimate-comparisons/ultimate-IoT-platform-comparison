@@ -13,7 +13,7 @@
     {
         "name": "Short Description",
         "tag":  "descr",
-        "style": "width: 25%",
+        "style": "width: 15%",
         "display": true,
         "type": {
             "tag": "text"
@@ -289,6 +289,11 @@
                     "name": "No",
                     "description": "",
                     "class": "label-danger"
+                },
+                {
+                    "name": "Yes",
+                    "description": "",
+                    "class": "label-default"
                 }
 	        ]
         }
@@ -321,6 +326,248 @@
                     "name": "n.a.",
                     "description": "",
                     "class": "label-default"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Integrity and Confidentiality",
+        "tag": "Integrity and Confidentiality",
+        "style": "width: 5%",
+        "display": false,
+        "type": {
+            "tag": "label",
+            "class": "label",
+            "values": [
+                {
+                    "name": "Yes",
+                    "description": "",
+                    "class": "label-success"
+                },
+                {
+                    "name": "No",
+                    "description": "",
+                    "class": "label-danger"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Consent",
+        "tag": "Consent",
+        "style": "width: 5%",
+        "display": false,
+        "type": {
+            "tag": "label",
+            "class": "label",
+            "values": [
+                {
+                    "name": "Yes",
+                    "description": "",
+                    "class": "label-success"
+                },
+                {
+                    "name": "No",
+                    "description": "",
+                    "class": "label-danger"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Policy-based access control",
+        "tag": "Policy-based access control",
+        "style": "width: 5%",
+        "display": false,
+        "type": {
+            "tag": "label",
+            "class": "label",
+            "values": [
+                {
+                    "name": "Yes",
+                    "description": "",
+                    "class": "label-success"
+                },
+                {
+                    "name": "No",
+                    "description": "",
+                    "class": "label-danger"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Authentication",
+        "tag": "Authentication",
+        "style": "width: 5%",
+        "display": false,
+        "type": {
+            "tag": "label",
+            "class": "label",
+            "values": [
+                {
+                    "name": "Yes",
+                    "description": "",
+                    "class": "label-success"
+                },
+                {
+                    "name": "No",
+                    "description": "",
+                    "class": "label-danger"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Federated Identity",
+        "tag": "Federated Identity",
+        "style": "width: 5%",
+        "display": false,
+        "type": {
+            "tag": "label",
+            "class": "label",
+            "values": [
+                {
+                    "name": "Yes",
+                    "description": "",
+                    "class": "label-success"
+                },
+                {
+                    "name": "No",
+                    "description": "",
+                    "class": "label-danger"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Secure Device Identity",
+        "tag": "Secure Device Identity",
+        "style": "width: 5%",
+        "display": false,
+        "type": {
+            "tag": "label",
+            "class": "label",
+            "values": [
+                {
+                    "name": "Yes",
+                    "description": "",
+                    "class": "label-success"
+                },
+                {
+                    "name": "No",
+                    "description": "",
+                    "class": "label-danger"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Anonymous Identities",
+        "tag": "Anonymous Identities",
+        "style": "width: 5%",
+        "display": false,
+        "type": {
+            "tag": "label",
+            "class": "label",
+            "values": [
+                {
+                    "name": "Yes",
+                    "description": "",
+                    "class": "label-success"
+                },
+                {
+                    "name": "No",
+                    "description": "",
+                    "class": "label-danger"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Attestation",
+        "tag": "Attestation",
+        "style": "width: 5%",
+        "display": false,
+        "type": {
+            "tag": "label",
+            "class": "label",
+            "values": [
+                {
+                    "name": "Yes",
+                    "description": "",
+                    "class": "label-success"
+                },
+                {
+                    "name": "No",
+                    "description": "",
+                    "class": "label-danger"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Summarisation and Filtering",
+        "tag": "Summarisation and Filtering",
+        "style": "width: 5%",
+        "display": false,
+        "type": {
+            "tag": "label",
+            "class": "label",
+            "values": [
+                {
+                    "name": "Yes",
+                    "description": "",
+                    "class": "label-success"
+                },
+                {
+                    "name": "No",
+                    "description": "",
+                    "class": "label-danger"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Context-based security and Reputation",
+        "tag": "Context-based security and Reputation",
+        "style": "width: 5%",
+        "display": false,
+        "type": {
+            "tag": "label",
+            "class": "label",
+            "values": [
+                {
+                    "name": "Yes",
+                    "description": "",
+                    "class": "label-success"
+                },
+                {
+                    "name": "No",
+                    "description": "",
+                    "class": "label-danger"
+                }
+            ]
+        }
+    },
+    {
+        "name": "IoT-specific Protocol Support",
+        "tag": "IoT-specific Protocol Support",
+        "style": "width: 5%",
+        "display": false,
+        "type": {
+            "tag": "label",
+            "class": "label",
+            "values": [
+                {
+                    "name": "Yes",
+                    "description": "",
+                    "class": "label-success"
+                },
+                {
+                    "name": "No",
+                    "description": "",
+                    "class": "label-danger"
                 }
             ]
         }
