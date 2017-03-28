@@ -4900,6 +4900,48 @@
     }
   },
   {
+    "tag": "RMP",
+    "descr": "[@Hirmer2016_RMP]",
+    "Open source": {
+      "plain": "- Apache 2.0\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Apache 2.0",
+              "plain": "Apache 2.0\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "REST": {
+      "plain": "- Yes\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Yes",
+              "plain": "Yes\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Description": {
+      "plain": "... RMP description ...",
+      "childs": {
+        "0": [
+          "... RMP description ..."
+        ]
+      }
+    }
+  },
+  {
     "tag": "SIRENA",
     "descr": "IoT and embedded systems middleware",
     "Data access control": {
