@@ -1,10 +1,6 @@
-<table>
-    <template ngFor let-entry [ngForOf]="this.citationServ.references">
-        <tr style="padding-left:5px;">
-            <td style="padding-right:10px;font-size:small;padding-top:3px;width:15%;" valign="top">
-                {{citationServ.bibEntriesInline[entry]}}:
-            </td>
-            <td [id]=entry [innerHtml]="citationServ.bibEntriesHtml[entry]|sanitizeHtml"></td>
-        </tr>
+<div class="reference-container">
+    <template ngFor let-entry [ngForOf]="this.citationServ.sortedReferences()">
+        <div>{{'[' + entry.index + ']'}}:</div>
+        <div [id]="entry.key" [innerHtml]="entry.html|sanitizeHtml"></div>
     </template>
-</table>
+</div>
