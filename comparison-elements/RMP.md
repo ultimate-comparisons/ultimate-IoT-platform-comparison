@@ -1,6 +1,6 @@
 # MBP
 
-The Multi-purpose Binding and Provisioning Platform (MBP), formerly known as Resource Management Platform (RMP), is a prototypical implementation for automated sensor registration, binding and sensor data provisioning [@Hirmer2016_RMP].
+The MBP, formerly known as RMP, is a prototypical implementation for automated sensor registration, binding and sensor data provisioning [@Hirmer2016_RMP].
 
 ## Support of heterogeneous devices
 - Yes
@@ -10,6 +10,7 @@ The Multi-purpose Binding and Provisioning Platform (MBP), formerly known as Res
 
 ## Architecture
 - Centralized
+- Cloud-based
 
 ## Open source
 - Apache 2.0
