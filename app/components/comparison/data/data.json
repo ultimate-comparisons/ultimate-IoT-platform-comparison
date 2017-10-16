@@ -4900,8 +4900,53 @@
     }
   },
   {
-    "tag": "RMP",
-    "descr": "[@Hirmer2016_RMP]",
+    "tag": "MBP",
+    "descr": "The Multi-purpose Binding and Provisioning Platform (MBP), formerly known as Resource Management Platform (RMP), is a prototypical implementation for automated sensor registration, binding and sensor data provisioning [@Hirmer2016_RMP].",
+    "Support of heterogeneous devices": {
+      "plain": "- Yes\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Yes",
+              "plain": "Yes\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Type": {
+      "plain": "- Server\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Server",
+              "plain": "Server\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Architecture": {
+      "plain": "- Centralized\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Centralized",
+              "plain": "Centralized\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
     "Open source": {
       "plain": "- Apache 2.0\n",
       "childs": {
@@ -4932,11 +4977,41 @@
         ]
       }
     },
-    "Description": {
-      "plain": "... RMP description ...",
+    "Data access control": {
+      "plain": "- No\n",
       "childs": {
         "0": [
-          "... RMP description ..."
+          [
+            {
+              "content": "No",
+              "plain": "No\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Service discovery": {
+      "plain": "- Yes\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Yes",
+              "plain": "Yes\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Description": {
+      "plain": "The Multi-purpose Binding and Provisioning Platform (MBP), formerly known as Resource Management Platform (RMP), is a prototypical implementation for the automated sensor registration, binding and provisioning of sensor data. It enables: \n(i) description of sensors, actuators and devices as well as their attributes, \n(ii) the registration of sensors and actuators of a physical device, \n(iii) the provisioning of sensor data using different data access paradigms (i.e., pull or through subscriptions), and \n(iv) dynamic sensor and actuator binding based on application requirements.",
+      "childs": {
+        "0": [
+          "The Multi-purpose Binding and Provisioning Platform (MBP), formerly known as Resource Management Platform (RMP), is a prototypical implementation for the automated sensor registration, binding and provisioning of sensor data. It enables: (i) description of sensors, actuators and devices as well as their attributes, (ii) the registration of sensors and actuators of a physical device, (iii) the provisioning of sensor data using different data access paradigms (i.e., pull or through subscriptions), and (iv) dynamic sensor and actuator binding based on application requirements."
         ]
       }
     }
