@@ -102,9 +102,11 @@ gulp.task('determinecolors', function () {
     let cCount = 0;
     for (let i = 0; i < data.length; i++) {
         let o = data[i];
-        if (o.type.tag === "label" && o.type.values !== null) {
+        if (o.type.tag === "label" && o.type.values !== null && o.type.values !== undefined) {
             count += o.type.values.length;
             cCount++;
+        } else if (o.type.values === null || o.type.values === undefined) {
+            data.splice(i, 1);
         }
     }
     let delta = Math.floor(colorArray.length / count);
