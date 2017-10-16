@@ -31,3 +31,36 @@ The Multi-purpose Binding and Provisioning Platform (MBP), formerly known as Res
 (ii) the registration of sensors and actuators of a physical device, 
 (iii) the provisioning of sensor data using different data access paradigms (i.e., pull or through subscriptions), and 
 (iv) dynamic sensor and actuator binding based on application requirements.
+
+## Integrity and Confidentiality
+- No
+
+## Consent
+- No
+
+## Policy-based access control
+- No
+
+## Authentication
+- No
+
+## Federated Identity
+- No
+
+## Secure Device Identity
+- No
+
+## Anonymous Identities
+- No
+
+## Attestation
+- No
+
+## Summarisation and Filtering
+- No
+
+## Context-based security and Reputation
+- No
+
+## IoT-specific Protocol Support
+- Yes (MQTT)
