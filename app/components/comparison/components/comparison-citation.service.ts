@@ -22,6 +22,9 @@ export class ComparisonCitationService {
             const entry: any = {'html': this.bibEntriesHtml[key]};
             entry['key'] = key;
             entry['index'] = this.bibEntriesInline[key];
+            if (entry['index'] === undefined) {
+                continue;
+            }
             entry['index'] = entry['index'].substr(1, entry['index'].length - 2);
             values.push(entry);
         }

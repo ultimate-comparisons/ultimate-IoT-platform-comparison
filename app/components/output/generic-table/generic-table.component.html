@@ -26,7 +26,7 @@
                 <td *ngIf="column.type?.tag==='label' && !column.repo">
                     <template ngFor let-sitem [ngForOf]="dat.getPropertyListItems(column.tag)"
                               *ngIf="column.type?.labelCls">
-                        <ptooltip [tooltip]="column.values[sitem.content].tag"
+                        <ptooltip [tooltip]="column.values[sitem.content]?.tag"
                                   [tooltipHtml]="sitem.htmlChilds | citation: [citationServ]" [position]="'n'">
                             <div *ngIf="column.type.colors.isEmpty()" class="{{column.type.getCls(sitem.content)}} {{column.type.labelCls.getCls(sitem.content)}} mylabel" (click)="searchFor(column.tag, sitem.content)">
                                 {{sitem.content}}
