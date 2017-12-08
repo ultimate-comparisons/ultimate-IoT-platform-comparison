@@ -4,63 +4,117 @@ Default short desciption.
 ## Support of heterogeneous devices
 - Yes
 - No
+- Embedded devices
+- Ethernet enabled
+- Home devices
 - Needs gateway
 - RFID
-- Embedded devices
-- Home devices
-- Ehternet enabled
+- Robots
 
 ## Type
-- M2M 
-- SaaS
-- PaaS
-- Server
-- P2P
+- Client/Server
 - Hub
-- client/Server
+- M2M
+- Mesh
 - OS
+- P2P
+- PaaS
 - Robots
+- SaaS
+- Server
 
 ## Architecture
 - Cloud-based
 - Centralized
 - Decentralized
+- Distributed
 
 ## Open source
 - Yes
-- Libraries only
+- No
+- Affero GNU Public License
+- Apache 2.0
 - Client open source
 - Gateway firmware open source
-- No
-- Apache 2.0
 - LGPLv3
-- Affero GNU Public License
+- Libraries only
+- M.I.T
 
 ## REST
-- n.a.
-- No
 - Yes
+- No
 - CoAP
+- n.a.
 
 ## Data access control
-- OAuth2
-- Secured access
-- n.a.
-- Role-based
-- User's choice
-- 4 levels
-- Locally stored
-- No storage
+- Yes
+- No
+- 2 levels
 - 3 levels
-- User-based privileges
+- 4 levels
 - Facebook like privacy settings
 - Fine-grained
-- 2 levels
+- Locally stored
+- n.a.
+- No storage
+- OAuth2
+- Role-based
+- Secured access
+- User-based privileges
+- User's choice
+- XACML
 
 ## Service discovery
-- No
 - Yes
+- No
 - Limited
+- n.a.
 
+## Integrity and Confidentiality
+- Yes
+- No
+
+## Consent
+- Yes
+- No
+
+## Policy-based access control
+- Yes
+- No
+
+## Authentication
+- Yes
+- No
+
+## Federated Identity
+- Yes
+- No
+
+## Secure Device Identity
+- Yes
+- No
+
+## Anonymous Identities
+- Yes
+- No
+
+## Attestation
+- Yes
+- No
+
+## Summarisation and Filtering
+- Yes
+- No
+
+## Context-based security and Reputation
+- Yes
+- No
+
+## IoT-specific Protocol Support
+- MQTT
+- AMQP
+- CoAP
+- Others
+- No
 ## Description
 Default __platform__ description in markdown.

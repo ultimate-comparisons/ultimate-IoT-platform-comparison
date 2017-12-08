@@ -1,61 +1,244 @@
 [
-    {
-        "name": "Support of heterogeneous devices",
-        "tag": "Support of heterogeneous devices",
-        "description": "Support heterogeneous IoT devices status of the platform.",
-        "placeholder": "Select support of heterogeneous devices ...",
-        "and_search": false,
-        "values": [
-            {"name": "Needs gateway"},
-            {"name": "RFID"},
-            {"name": "No"},
-            {"name": "Embedded devices"},
-            {"name": "Home devices"},
-            {"name": "Yes"}
-        ]
-    },
-    {
-        "name": "Open source",
-        "tag": "Open source",
-        "description": "License status of the platform.",
-        "placeholder": "Select open source status ...",
-        "and_search": false,
-        "values": [
-            {"name": "Libraries only"},
-            {"name": "Client open source"},
-            {"name": "Gateway firmware open source"},
-            {"name": "No"},
-            {"name": "Yes"},
-            {"name": "Apache 2.0"},
-            {"name": "LGPLv3"},
-            {"name": "Affero GNU Public License"}
-        ]
-    },
-    {
-        "name": "REST",
-        "tag": "REST",
-        "description": "Support of REST.",
-        "placeholder": "Select support of REST ...",
-        "and_search": false,
-        "values": [
-            {"name": "No"},
-            {"name": "Yes"},
-            {"name": "n.a."},
-            {"name": "CoAP"},
-            {"name": ""}
-        ]
-    },
-    {
-        "name": "Service discovery",
-        "tag": "Service discovery",
-        "description": "Supports service discovery.",
-        "placeholder": "Select support of service discovery ...",
-        "and_search": false,
-        "values": [
-            {"name": "No"},
-            {"name": "Yes"},
-            {"name": "n.a."},
-            {"name": "Limited"}
-        ]
-    }
+  {
+    "name": "Support of heterogeneous devices",
+    "tag": "Support of heterogeneous devices",
+    "description": "Support heterogeneous IoT devices status of the platform.",
+    "placeholder": "Select support of heterogeneous devices ...",
+    "and_search": false,
+    "values": [
+      {"name": "Yes"},
+      {"name": "No"},
+      {"name": "Embedded devices"},
+      {"name": "Ethernet enabled"},
+      {"name": "Home devices"},
+      {"name": "Needs gateway"},
+      {"name": "RFID"},
+      {"name": "Robots"}
+    ]
+  },
+  {
+    "name": "Type",
+    "tag": "Type",
+    "description": "Platform Type.",
+    "placeholder": "Select platform type ...",
+    "and_search": false,
+    "values": [
+      {"name": "Client/Server"},
+      {"name": "Hub"},
+      {"name": "M2M"},
+      {"name": "Mesh"},
+      {"name": "OS"},
+      {"name": "P2P"},
+      {"name": "Paas"},
+      {"name": "Robots"},
+      {"name": "SaaS"},
+      {"name": "Server"}
+    ]
+  },
+  {
+    "name": "Architecture",
+    "tag": "Architecture",
+    "description": "Platform Architecture.",
+    "placeholder": "Select platform architecture ...",
+    "and_search": false,
+    "values": [
+      {"name": "Cloud-based"},
+      {"name": "Centralized"},
+      {"name": "Decentralized"},
+      {"name": "Distributed"}
+    ]
+  },
+  {
+    "name": "Open source",
+    "tag": "Open source",
+    "description": "License status of the platform.",
+    "placeholder": "Select open source status ...",
+    "and_search": false,
+    "values": [
+      {"name": "Yes"},
+      {"name": "No"},
+      {"name": "Affero GNU Public License"},
+      {"name": "Apache 2.0"},
+      {"name": "Client open source"},
+      {"name": "Gateway firmware open source"},
+      {"name": "LGPLv3"},
+      {"name": "Libraries only"},
+      {"name": "M.I.T"}
+    ]
+  },
+  {
+    "name": "REST",
+    "tag": "REST",
+    "description": "Support of REST.",
+    "placeholder": "Select support of REST ...",
+    "and_search": false,
+    "values": [
+      {"name": "Yes"},
+      {"name": "No"},
+      {"name": "CoAP"},
+      {"name": "n.a."}
+    ]
+  },
+  {
+    "name": "Data access control",
+    "tag": "Data access control",
+    "description": "Data access control of the platform.",
+    "placeholder": "Select data access control ...",
+    "and_search": false,
+    "values": [
+      {"name": "Yes"},
+      {"name": "No"},
+      {"name": "2 levels"},
+      {"name": "3 levels"},
+      {"name": "4 levels"},
+      {"name": "Facebook like privacy settings"},
+      {"name": "Fine-grained"},
+      {"name": "Locally stored"},
+      {"name": "n.a."},
+      {"name": "No storage"},
+      {"name": "OAuth2"},
+      {"name": "Role-based"},
+      {"name": "Secured access"},
+      {"name": "User-based privileges"},
+      {"name": "User's choice"},
+      {"name": "XACML"}
+    ]
+  },
+  {
+    "name": "Service discovery",
+    "tag": "Service discovery",
+    "description": "Supports service discovery.",
+    "placeholder": "Select support of service discovery ...",
+    "and_search": false,
+    "values": [
+      {"name": "No"},
+      {"name": "Yes"},
+      {"name": "n.a."},
+      {"name": "Limited"}
+    ]
+  },
+  {
+    "name": "Integrity and Confidentiality",
+    "tag": "Integrity and Confidentiality",
+    "description": "Supports integrity and confidentiality.",
+    "placeholder": "Select support of integrity and confidentiality ...",
+    "and_search": false,
+    "values": [
+      {"name": "Yes"},
+      {"name": "No"}
+    ]
+  },
+  {
+    "name": "Consent",
+    "tag": "Consent",
+    "description": "Supports consent.",
+    "placeholder": "Select support of consent ...",
+    "and_search": false,
+    "values": [
+      {"name": "Yes"},
+      {"name": "No"}
+    ]
+  },
+  {
+    "name": "Policy-based access model",
+    "tag": "Policy-based access model",
+    "description": "Supports policy-based access model.",
+    "placeholder": "Select support of policy-based access model ...",
+    "and_search": false,
+    "values": [
+      {"name": "Yes"},
+      {"name": "No"}
+    ]
+  },
+  {
+    "name": "Authentication",
+    "tag": "Authentication",
+    "description": "Supports authentication.",
+    "placeholder": "Select support of authentication ...",
+    "and_search": false,
+    "values": [
+      {"name": "Yes"},
+      {"name": "No"}
+    ]
+  },
+  {
+    "name": "Federate Identity",
+    "tag": "Federate Identity",
+    "description": "Supports federate identity.",
+    "placeholder": "Select support of federate identity ...",
+    "and_search": false,
+    "values": [
+      {"name": "Yes"},
+      {"name": "No"}
+    ]
+  },
+  {
+    "name": "Secure Device Identity",
+    "tag": "Secure Device Identity",
+    "description": "Supports secure device identity.",
+    "placeholder": "Select support of secure device identity ...",
+    "and_search": false,
+    "values": [
+      {"name": "Yes"},
+      {"name": "No"}
+    ]
+  },
+  {
+    "name": "Anonymous Identities",
+    "tag": "Anonymous Identities",
+    "description": "Supports anonymous identities.",
+    "placeholder": "Select support of anonymous identities ...",
+    "and_search": false,
+    "values": [
+      {"name": "Yes"},
+      {"name": "No"}
+    ]
+  },
+  {
+    "name": "Attestation",
+    "tag": "Attestation",
+    "description": "Supports attestation.",
+    "placeholder": "Select support of attestation ...",
+    "and_search": false,
+    "values": [
+      {"name": "Yes"},
+      {"name": "No"}
+    ]
+  },
+  {
+    "name": "Summarisation and Filtering",
+    "tag": "Summarisation and Filtering",
+    "description": "Supports summarisation and filtering.",
+    "placeholder": "Select support of summarisation and filtering ...",
+    "and_search": false,
+    "values": [
+      {"name": "Yes"},
+      {"name": "No"}
+    ]
+  },
+  {
+    "name": "Context-based security and Reputation",
+    "tag": "Context-based security and Reputation",
+    "description": "Supports context-based security and reputation .",
+    "placeholder": "Select support of context-based security and reputation ...",
+    "and_search": false,
+    "values": [
+      {"name": "Yes"},
+      {"name": "No"}
+    ]
+  },
+  {
+    "name": "IoT-specific Protocol Support",
+    "tag": "IoT-specific Protocol Support",
+    "description": "Supports IoT-specific protocols.",
+    "placeholder": "Select support of IoT-specific protocols ...",
+    "and_search": false,
+    "values": [
+      {"name": "MQTT"},
+      {"name": "AMQP"},
+      {"name": "CoAP"},
+      {"name": "Others"},
+      {"name": "No"}
+    ]
+  }
 ]

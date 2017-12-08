@@ -19,11 +19,13 @@ This is an ultimate comparison of IoT platforms.
 
 
 ## IoT Platform Specification
+A full list of all criteria and their values can be found [here](https://github.com/ultimate-comparisons/ultimate-IoT-platform-comparison/blob/master/comparison-configuration/description.md).
+
 The code below shows a sample element.
 
     # Default Platform - http://default-platform.com
     Default short desciption.
-
+    
     ## Support of heterogeneous devices
     - Yes
     - No
@@ -32,7 +34,7 @@ The code below shows a sample element.
     - Embedded devices
     - Home devices
     - Ehternet enabled
-
+    
     ## Type
     - M2M 
     - SaaS
@@ -43,12 +45,12 @@ The code below shows a sample element.
     - client/Server
     - OS
     - Robots
-
+    
     ## Architecture
     - Cloud-based
     - Centralized
     - Decentralized
-
+    
     ## Open source
     - Yes
     - Libraries only
@@ -58,13 +60,13 @@ The code below shows a sample element.
     - Apache 2.0
     - LGPLv3
     - Affero GNU Public License
-
+    
     ## REST
     - n.a.
     - No
     - Yes
     - CoAP
-
+    
     ## Data access control
     - OAuth2
     - Secured access
@@ -79,12 +81,12 @@ The code below shows a sample element.
     - Facebook like privacy settings
     - Fine-grained
     - 2 levels
-
+    
     ## Service discovery
     - No
     - Yes
     - Limited
-
+    
     ## Description
     Default __platform__ description in markdown.
 
