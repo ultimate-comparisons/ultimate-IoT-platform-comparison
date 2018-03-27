@@ -1,0 +1,402 @@
+title: Ultimate-IoT-platform-comparison
+subtitle: IoT Platform Comparison
+selectTitle: Criteria
+tableTitle: Platforms
+repository: 'https://github.com/ultimate-comparisons/ultimate-IoT-platform-comparison.git'
+details:
+  header:
+    nameRef: id
+    urlRef: inline
+  body:
+    title: Description
+    bodyRef: Description
+citation:
+  csl: acm-siggraph.csl
+  bib: literature.bib
+criteria:
+  - id:
+      name: Platform
+      search: false
+      table: true
+      detail: false
+  - description:
+      name: Short description
+      search: false
+      detail: false
+      type: markdown
+  - Description:
+      search: false
+      detail: true
+      type: markdown
+      table: false
+  - Support of heterogeneous devices:
+      table: true
+      search: true
+      description: Support heterogeneous IoT devices status of the platform.
+      placeholder: Select support of heterogeneous devices ...
+      andSearch: false
+      type: label
+      values:
+        Needs gateway:
+          description:
+          class: label-danger
+        RFID:
+          description: Radio-frequency identification
+          class: label-danger
+        No:
+          description:
+          class: label-danger
+        Embedded devices:
+          description:
+          class: label-warning
+        Robots:
+          description:
+          class: label-warning
+        Home devices:
+          description:
+          class: label-warning
+        Ethernet enabled:
+          description:
+          class: label-warning
+        Yes:
+          description:
+          class: label-success
+  - Type:
+      table: true
+      search: true
+      description: Platfrom Type.
+      placeholder: Select platform type ...
+      andSearch: false
+      type: label
+      values:
+        M2M:
+          description: Machine-to-Machine
+        PaaS:
+          description: Platform-as-a-Service
+        SaaS:
+          description: Software-as-a-Service
+        client:
+          description:
+        Server:
+          description:
+        Robots:
+          description:
+        Hub:
+          description:
+        Mesh:
+          description:
+        Client/Server:
+          description:
+        OS:
+          description:
+        P2P:
+          description:
+  - Architecture:
+      table: true
+      search: true
+      description: Platform Architecture.
+      placeholder: Select platform architecture ...
+      andSearch: true
+      type: label
+      values:
+        Cloud-based:
+          class: label-info
+        Centralized:
+          class: label-info
+        Decentralized:
+          class: label-info
+        Distributed:
+          class: label-info
+  - Open source:
+      table: true
+      search: true
+      description: License status of the platform.
+      placeholder: Select open source status ...
+      andSearch: false
+      type: label
+      values:
+        Libraries only:
+          description:
+        Client open source:
+          description:
+        Gateway firmware open source:
+          description:
+        No:
+          description:
+        Yes:
+          description:
+        EPL-1.0:
+          description: '[EPL-1.0](https://spdx.org/licenses/EPL-1.0.html)'
+          class: label-blue
+        LGPL-3.0:
+          description: '[LGPL-3.0](https://spdx.org/licenses/LGPL-3.0.html)'
+          class: label-blue
+        Apache-2.0:
+          description: '[Apache-2.0](https://spdx.org/licenses/Apache-2.0.html)'
+          class: label-blue
+        MIT:
+          description: '[MIT](https://spdx.org/licenses/MIT.html)'
+          class: label-blue
+        MPL-2.0:
+          description: '[MPL-2.0](https://spdx.org/licenses/MPL-2.0.html)'
+          class: label-blue
+        BSD-2-Clause:
+          description: '[BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)'
+          class: label-blue
+        BSD-3-Clause:
+          description: '[BSD-3-Clause](https://spdx.org/licenses/BSD-3-Clause.html)'
+          class: label-blue
+        MPL-1.1:
+          description: '[MPL-1.1](https://spdx.org/licenses/MPL-1.1.html)'
+          class: label-blue
+        AGPL-3.0:
+          description: '[AGPL-3.0](https://spdx.org/licenses/AGPL-3.0.html)'
+          class: label-blue
+  - REST:
+      table: true
+      search: true
+      description: Support of REST.
+      placeholder: Select support of REST ...
+      andSearch: false
+      type: label
+      values:
+        n.a.:
+          description:
+          class: label-default
+        No:
+          description:
+          class: label-danger
+        Yes:
+          description:
+          class: label-success
+        CoAP:
+          description: Constrained Application Protocol
+          class: label-success
+  - Data access control:
+      table: true
+      search: true
+      description: Data access control of the platform.
+      placeholder: Select data access control ...
+      andSearch: false
+      type: label
+      values:
+        OAuth2:
+          description:
+          class: label-default
+        Secured access:
+          description:
+          class: label-default
+        n.a.:
+          description:
+          class: label-default
+        Role-based:
+          description:
+          class: label-default
+        User's choice:
+          description:
+          class: label-success
+        4 levels:
+          description:
+          class: label-success
+        Locally stored:
+          description:
+          class: label-success
+        No storage:
+          description:
+          class: label-success
+        3 levels:
+          description:
+          class: label-success
+        User-based privileges:
+          description:
+          class: label-success
+        Facebook like privacy settings:
+          description:
+          class: label-warning
+        Fine-grained:
+          description:
+          class: label-warning
+        2 levels:
+          description:
+          class: label-warning
+        XACML:
+          class: label-success
+        No:
+          description:
+          class: label-danger
+        Yes:
+          description:
+          class: label-default
+  - Service discovery:
+      table: true
+      search: true
+      description: Supports service discovery.
+      placeholder: Select support of service discovery ...
+      andSearch: false
+      type: label
+      values:
+        No:
+          description:
+          class: label-danger
+        Limited:
+          description:
+          class: label-warning
+        Yes:
+          description:
+          class: label-success
+        n.a.:
+          description:
+          class: label-default
+  - Integrity and Confidentiality:
+      table: false
+      search: true
+      description: Supports integrity and confidentiality.
+      placeholder: Select support of integrity and confidentiality ...
+      andSearch: false
+      type: label
+      values:
+        Yes:
+          description:
+          class: label-success
+        No:
+          description:
+          class: label-danger
+  - Consent:
+      table: false
+      search: true
+      description: Supports consent.
+      placeholder: Select support of consent ...
+      andSearch: false
+      type: label
+      values:
+        Yes:
+          description:
+          class: label-success
+        No:
+          description:
+          class: label-danger
+  - Policy-based access control:
+      table: false
+      search: true
+      description: Supports policy-based access model.
+      placeholder: Select support of policy-based access model ...
+      andSearch: false
+      type: label
+      values:
+        Yes:
+          description:
+          class: label-success
+        No:
+          description:
+          class: label-danger
+  - Authentication:
+      table: false
+      search: true
+      description: Supports authentication.
+      placeholder: Select support of authentication ...
+      andSearch: false
+      type: label
+      values:
+        Yes:
+          description:
+          class: label-success
+        No:
+          description:
+          class: label-danger
+  - Federated Identity:
+      table: false
+      search: true
+      description: Supports federate identity.
+      placeholder: Select support of federate identity ...
+      andSearch: false
+      type: label
+      values:
+        Yes:
+          description:
+          class: label-success
+        No:
+          description:
+          class: label-danger
+  - Secure Device Identity:
+      table: false
+      search: true
+      description: Supports Secure Device Identity.
+      placeholder: Select support of secure device identity ...
+      andSearch: false
+      type: label
+      values:
+        Yes:
+          description:
+          class: label-success
+        No:
+          description:
+          class: label-danger
+  - Anonymous Identities:
+      table: false
+      search: true
+      description: Supports anonymous identities.
+      placeholder: Select support of anonymous identities ...
+      andSearch: false
+      type: label
+      values:
+        Yes:
+          description:
+          class: label-success
+        No:
+          description:
+          class: label-danger
+  - Attestation:
+      table: false
+      search: true
+      description: Supports attestation.
+      placeholder: Select support of attestation ...
+      andSearch: false
+      type: label
+      values:
+        Yes:
+          description:
+          class: label-success
+        No:
+          description:
+          class: label-danger
+  - Summarisation and Filtering:
+      table: false
+      search: true
+      placeholder: Supports summarisation and filtering.
+      description: Select support of summarisation and filtering ...
+      andSearch: false
+      type: label
+      values:
+        Yes:
+          description:
+          class: label-success
+        No:
+          description:
+          class: label-danger
+  - Context-based security and Reputation:
+      table: false
+      search: true
+      description: Supports context-based security and reputation.
+      placeholder: Select support of context-based security and reputation ...
+      andSearch: false
+      type: label
+      values:
+        Yes:
+          description:
+          class: label-success
+        No:
+          description:
+          class: label-danger
+  - IoT-specific Protocol Support:
+      table: false
+      search: true
+      description: Supports IoT-specific protocols.
+      placeholder: Select support of IoT-specific protocols ...
+      andSearch: false
+      values:
+        Yes:
+          description:
+          class: label-success
+        No:
+          description:
+          class: label-danger

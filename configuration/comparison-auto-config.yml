@@ -1,0 +1,625 @@
+title: Ultimate-IoT-platform-comparison
+subtitle: IoT Platform Comparison
+selectTitle: Criteria
+tableTitle: Platforms
+repository: 'https://github.com/ultimate-comparisons/ultimate-IoT-platform-comparison.git'
+details:
+  header:
+    nameRef: id
+    urlRef: inline
+  body:
+    title: Description
+    bodyRef: Description
+citation:
+  csl: acm-siggraph.csl
+  bib: literature.bib
+criteria:
+  - id:
+      name: Platform
+      search: false
+      table: true
+      detail: false
+  - description:
+      name: Short description
+      search: false
+      detail: false
+      type: markdown
+  - Description:
+      search: false
+      detail: true
+      type: markdown
+      table: false
+  - Support of heterogeneous devices:
+      table: true
+      search: true
+      description: Support heterogeneous IoT devices status of the platform.
+      placeholder: Select support of heterogeneous devices ...
+      andSearch: false
+      type: label
+      values:
+        Needs gateway:
+          description: null
+          class: label-danger
+        RFID:
+          description: Radio-frequency identification
+          class: label-danger
+        'No':
+          description: null
+          class: label-danger
+        Embedded devices:
+          description: null
+          class: label-warning
+        Robots:
+          description: null
+          class: label-warning
+        Home devices:
+          description: null
+          class: label-warning
+        Ethernet enabled:
+          description: null
+          class: label-warning
+        'Yes':
+          description: null
+          class: label-success
+  - Type:
+      table: true
+      search: true
+      description: Platfrom Type.
+      placeholder: Select platform type ...
+      andSearch: false
+      type: label
+      values:
+        M2M:
+          description: Machine-to-Machine
+        PaaS:
+          description: Platform-as-a-Service
+        SaaS:
+          description: Software-as-a-Service
+        client:
+          description: null
+        Server:
+          description: null
+        Robots:
+          description: null
+        Hub:
+          description: null
+        Mesh:
+          description: null
+        Client/Server:
+          description: null
+        OS:
+          description: null
+        P2P:
+          description: null
+  - Architecture:
+      table: true
+      search: true
+      description: Platform Architecture.
+      placeholder: Select platform architecture ...
+      andSearch: true
+      type: label
+      values:
+        Cloud-based:
+          class: label-info
+        Centralized:
+          class: label-info
+        Decentralized:
+          class: label-info
+        Distributed:
+          class: label-info
+  - Open source:
+      table: true
+      search: true
+      description: License status of the platform.
+      placeholder: Select open source status ...
+      andSearch: false
+      type: label
+      values:
+        Libraries only:
+          description: null
+        Client open source:
+          description: null
+        Gateway firmware open source:
+          description: null
+        'No':
+          description: null
+        'Yes':
+          description: null
+        EPL-1.0:
+          description: '[EPL-1.0](https://spdx.org/licenses/EPL-1.0.html)'
+          class: label-blue
+        LGPL-3.0:
+          description: '[LGPL-3.0](https://spdx.org/licenses/LGPL-3.0.html)'
+          class: label-blue
+        Apache-2.0:
+          description: '[Apache-2.0](https://spdx.org/licenses/Apache-2.0.html)'
+          class: label-blue
+        MIT:
+          description: '[MIT](https://spdx.org/licenses/MIT.html)'
+          class: label-blue
+        MPL-2.0:
+          description: '[MPL-2.0](https://spdx.org/licenses/MPL-2.0.html)'
+          class: label-blue
+        BSD-2-Clause:
+          description: '[BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)'
+          class: label-blue
+        BSD-3-Clause:
+          description: '[BSD-3-Clause](https://spdx.org/licenses/BSD-3-Clause.html)'
+          class: label-blue
+        MPL-1.1:
+          description: '[MPL-1.1](https://spdx.org/licenses/MPL-1.1.html)'
+          class: label-blue
+        AGPL-3.0:
+          description: '[AGPL-3.0](https://spdx.org/licenses/AGPL-3.0.html)'
+          class: label-blue
+  - REST:
+      table: true
+      search: true
+      description: Support of REST.
+      placeholder: Select support of REST ...
+      andSearch: false
+      type: label
+      values:
+        n.a.:
+          description: null
+          class: label-default
+        'No':
+          description: null
+          class: label-danger
+        'Yes':
+          description: null
+          class: label-success
+        CoAP:
+          description: Constrained Application Protocol
+          class: label-success
+  - Data access control:
+      table: true
+      search: true
+      description: Data access control of the platform.
+      placeholder: Select data access control ...
+      andSearch: false
+      type: label
+      values:
+        OAuth2:
+          description: null
+          class: label-default
+        Secured access:
+          description: null
+          class: label-default
+        n.a.:
+          description: null
+          class: label-default
+        Role-based:
+          description: null
+          class: label-default
+        User's choice:
+          description: null
+          class: label-success
+        4 levels:
+          description: null
+          class: label-success
+        Locally stored:
+          description: null
+          class: label-success
+        No storage:
+          description: null
+          class: label-success
+        3 levels:
+          description: null
+          class: label-success
+        User-based privileges:
+          description: null
+          class: label-success
+        Facebook like privacy settings:
+          description: null
+          class: label-warning
+        Fine-grained:
+          description: null
+          class: label-warning
+        2 levels:
+          description: null
+          class: label-warning
+        XACML:
+          class: label-success
+        'No':
+          description: null
+          class: label-danger
+        'Yes':
+          description: null
+          class: label-default
+  - Service discovery:
+      table: true
+      search: true
+      description: Supports service discovery.
+      placeholder: Select support of service discovery ...
+      andSearch: false
+      type: label
+      values:
+        'No':
+          description: null
+          class: label-danger
+        Limited:
+          description: null
+          class: label-warning
+        'Yes':
+          description: null
+          class: label-success
+        n.a.:
+          description: null
+          class: label-default
+  - Integrity and Confidentiality:
+      table: false
+      search: true
+      description: Supports integrity and confidentiality.
+      placeholder: Select support of integrity and confidentiality ...
+      andSearch: false
+      type: label
+      values:
+        'Yes':
+          description: null
+          class: label-success
+        'No':
+          description: null
+          class: label-danger
+  - Consent:
+      table: false
+      search: true
+      description: Supports consent.
+      placeholder: Select support of consent ...
+      andSearch: false
+      type: label
+      values:
+        'Yes':
+          description: null
+          class: label-success
+        'No':
+          description: null
+          class: label-danger
+  - Policy-based access control:
+      table: false
+      search: true
+      description: Supports policy-based access model.
+      placeholder: Select support of policy-based access model ...
+      andSearch: false
+      type: label
+      values:
+        'Yes':
+          description: null
+          class: label-success
+        'No':
+          description: null
+          class: label-danger
+  - Authentication:
+      table: false
+      search: true
+      description: Supports authentication.
+      placeholder: Select support of authentication ...
+      andSearch: false
+      type: label
+      values:
+        'Yes':
+          description: null
+          class: label-success
+        'No':
+          description: null
+          class: label-danger
+  - Federated Identity:
+      table: false
+      search: true
+      description: Supports federate identity.
+      placeholder: Select support of federate identity ...
+      andSearch: false
+      type: label
+      values:
+        'Yes':
+          description: null
+          class: label-success
+        'No':
+          description: null
+          class: label-danger
+  - Secure Device Identity:
+      table: false
+      search: true
+      description: Supports Secure Device Identity.
+      placeholder: Select support of secure device identity ...
+      andSearch: false
+      type: label
+      values:
+        'Yes':
+          description: null
+          class: label-success
+        'No':
+          description: null
+          class: label-danger
+  - Anonymous Identities:
+      table: false
+      search: true
+      description: Supports anonymous identities.
+      placeholder: Select support of anonymous identities ...
+      andSearch: false
+      type: label
+      values:
+        'Yes':
+          description: null
+          class: label-success
+        'No':
+          description: null
+          class: label-danger
+  - Attestation:
+      table: false
+      search: true
+      description: Supports attestation.
+      placeholder: Select support of attestation ...
+      andSearch: false
+      type: label
+      values:
+        'Yes':
+          description: null
+          class: label-success
+        'No':
+          description: null
+          class: label-danger
+  - Summarisation and Filtering:
+      table: false
+      search: true
+      placeholder: Supports summarisation and filtering.
+      description: Select support of summarisation and filtering ...
+      andSearch: false
+      type: label
+      values:
+        'Yes':
+          description: null
+          class: label-success
+        'No':
+          description: null
+          class: label-danger
+  - Context-based security and Reputation:
+      table: false
+      search: true
+      description: Supports context-based security and reputation.
+      placeholder: Select support of context-based security and reputation ...
+      andSearch: false
+      type: label
+      values:
+        'Yes':
+          description: null
+          class: label-success
+        'No':
+          description: null
+          class: label-danger
+  - IoT-specific Protocol Support:
+      table: false
+      search: true
+      description: Supports IoT-specific protocols.
+      placeholder: Select support of IoT-specific protocols ...
+      andSearch: false
+      values:
+        'Yes':
+          description: null
+          class: label-success
+        'No':
+          description: null
+          class: label-danger
+autoCriteria:
+  IoT-specific Protocol Support:
+    values:
+      MQTT: {}
+      AMQP: {}
+      CoAP: {}
+      Yes (MQTT): {}
+      Others: {}
+  Open source:
+    values:
+      Eclipse Distribution License 1.0: {}
+      n.a.: {}
+  Support of heterogeneous devices:
+    values:
+      Ehternet enabled: {}
+autoColor:
+  License:
+    MIT:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(210, 100%, 70%)'
+    MPL-2.0:
+      color: '#ffff00'
+      backgroundColor: 'hsl(240, 100%, 70%)'
+  Uncolored:
+    Color 1:
+      color: '#ffff00'
+      backgroundColor: 'hsl(270, 100%, 70%)'
+    Color 2:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(300, 100%, 70%)'
+    Color 3:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(330, 100%, 70%)'
+    Color 4:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(105, 100%, 70%)'
+  NumberColumn:
+    '100':
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(150, 100%, 70%)'
+    '199':
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(30, 100%, 70%)'
+    '200':
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(60, 100%, 70%)'
+    '233':
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(210, 100%, 70%)'
+    '250':
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(90, 100%, 70%)'
+    '300':
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(120, 100%, 70%)'
+  Type:
+    client:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(60, 100%, 70%)'
+    Hub:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(60, 100%, 70%)'
+    M2M:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(60, 100%, 70%)'
+    Mesh:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(60, 100%, 70%)'
+    PaaS:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(60, 100%, 70%)'
+    Robots:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(60, 100%, 70%)'
+    SaaS:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(60, 100%, 70%)'
+    Server:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(60, 100%, 70%)'
+    client/Server:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(210, 100%, 70%)'
+    Client/Server:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(210, 100%, 70%)'
+    OS:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(210, 100%, 70%)'
+    P2P:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(210, 100%, 70%)'
+  Open source:
+    Client open source:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(150, 100%, 70%)'
+    Gateway firmware open source:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(150, 100%, 70%)'
+    Libraries only:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(150, 100%, 70%)'
+    'No':
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(150, 100%, 70%)'
+    'Yes':
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(150, 100%, 70%)'
+    Affero GNU Public License:
+      color: '#ffff00'
+      backgroundColor: 'hsl(255, 100%, 70%)'
+    Apache 2.0:
+      color: '#ffff00'
+      backgroundColor: 'hsl(255, 100%, 70%)'
+    Eclipse Distribution License 1.0:
+      color: '#ffff00'
+      backgroundColor: 'hsl(255, 100%, 70%)'
+    Eclipse Public License 1.0:
+      color: '#ffff00'
+      backgroundColor: 'hsl(255, 100%, 70%)'
+    LGPLv3:
+      color: '#ffff00'
+      backgroundColor: 'hsl(255, 100%, 70%)'
+    M.I.T:
+      color: '#ffff00'
+      backgroundColor: 'hsl(255, 100%, 70%)'
+    n.a.:
+      color: '#ffff00'
+      backgroundColor: 'hsl(255, 100%, 70%)'
+  Data access control:
+    2 levels:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(165, 100%, 70%)'
+    3 levels:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(165, 100%, 70%)'
+    4 levels:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(165, 100%, 70%)'
+    Facebook like privacy settings:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(165, 100%, 70%)'
+    Fine-grained:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(165, 100%, 70%)'
+    Locally stored:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(165, 100%, 70%)'
+    n.a.:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(165, 100%, 70%)'
+    'No':
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(165, 100%, 70%)'
+    No storage:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(165, 100%, 70%)'
+    OAuth2:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(165, 100%, 70%)'
+    Role-based:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(165, 100%, 70%)'
+    Secured access:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(165, 100%, 70%)'
+    User-based privileges:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(165, 100%, 70%)'
+    User's choice:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(165, 100%, 70%)'
+    XACML:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(165, 100%, 70%)'
+    'Yes':
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(165, 100%, 70%)'
+  REST API:
+    'Yes':
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(300, 100%, 70%)'
+  IoT-specific Protocol Support:
+    AMQP:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(15, 100%, 70%)'
+    CoAP:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(15, 100%, 70%)'
+    MQTT:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(15, 100%, 70%)'
+    Others:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(15, 100%, 70%)'
+    Yes (MQTT):
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(15, 100%, 70%)'
+  Support of heterogeneous devices:
+    Ethernet enabled:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(60, 100%, 70%)'
+    Ehternet enabled:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(165, 100%, 70%)'
+autoCitation:
+  Hirmer2016_RMP:
+    index: 0
+    value: >-
+      Hirmer, P., Breitenbücher, U., da Silva, A.C.F., Képes, K., Mitschang, B.,
+      and Wieland, M. 2016. Automating the Provisioning and Configuration of
+      Devices in the Internet of Things. Complex Systems Informatics and
+      Modeling Quarterly 9, 28–43.
+  MINERAUD20165:
+    index: 1
+    value: >-
+      Mineraud, J., Mazhelis, O., Su, X., and Tarkoma, S. 2016. A gap analysis
+      of Internet-of-Things platforms. Computer Communications 89–90, 5–16.
+  Fremantle2017:
+    index: 2
+    value: >-
+      Fremantle, P. and Scott, P. 2017. A survey of secure middleware for the
+      Internet of Things. PeerJ Preprints 5, e1241v2.

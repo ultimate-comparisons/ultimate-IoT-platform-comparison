@@ -4,19 +4,11 @@
 
 This is an ultimate comparison of IoT platforms.
 
-## Test it
-1. Install [node.js](https://nodejs.org/en/)
-2. Intall [Java JDK8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
-3. Update npm (sudo): `npm install -g npm`
-4. Test dependencies:
+## Start the comparison
 
-        java -version
-        npm -version
-
-4. `npm install`
-5. `npm start` (starts the web page)
-6. [Setup automatic deployment of `www` directory using Travis CI](https://github.com/ultimate-comparisons/ultimate-comparison-BASE/wiki/Build-and-deploy-project-with-Travis-CI)
-
+1. Install dependencies `npm install`
+2. Start webserver `npm start`
+3. Alternatively start development mode `npm run dev`
 
 ## IoT Platform Specification
 A full list of all criteria and their values can be found [here](https://github.com/ultimate-comparisons/ultimate-IoT-platform-comparison/blob/master/comparison-configuration/description.md).
@@ -91,12 +83,9 @@ The code below shows a sample element.
     Default __platform__ description in markdown.
 
 
-
 ## License
 
-The code is licensed under [Apache 2.0], the content (located at `comparison-elements`) under [CC-BY-SA-4.0].
+The code is licensed under [MIT], the content (located at `data`) under [CC-BY-SA-4.0].
 
-  [Apache 2.0]: http://www.apache.org/licenses/LICENSE-2.0
+  [MIT]: https://opensource.org/licenses/MIT
   [CC-BY-SA-4.0]: http://creativecommons.org/licenses/by-sa/4.0/
-
-<hr />
