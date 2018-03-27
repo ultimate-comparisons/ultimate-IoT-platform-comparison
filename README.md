@@ -11,7 +11,7 @@ This is an ultimate comparison of IoT platforms.
 3. Alternatively start development mode `npm run dev`
 
 ## IoT Platform Specification
-A full list of all criteria and their values can be found [here](https://github.com/ultimate-comparisons/ultimate-IoT-platform-comparison/blob/master/comparison-configuration/description.md).
+A full list of all criteria and their values can be found [here](https://github.com/ultimate-comparisons/ultimate-IoT-platform-comparison/blob/master/configuration/description.md).
 
 The code below shows a sample element.
 
