@@ -1,6 +1,0 @@
-.reference-container {
-    display: grid;
-    grid-template-columns: min-content auto;
-    grid-column-gap: 10px;
-    grid-auto-flow: row;
-}
