@@ -17,7 +17,7 @@ The code below shows a sample element.
 
     # Default Platform - http://default-platform.com
     Default short desciption.
-    
+
     ## Support of heterogeneous devices
     - Yes
     - No
@@ -26,9 +26,9 @@ The code below shows a sample element.
     - Embedded devices
     - Home devices
     - Ehternet enabled
-    
+
     ## Type
-    - M2M 
+    - M2M
     - SaaS
     - PaaS
     - Server
@@ -37,12 +37,12 @@ The code below shows a sample element.
     - client/Server
     - OS
     - Robots
-    
+
     ## Architecture
     - Cloud-based
     - Centralized
     - Decentralized
-    
+
     ## Open source
     - Yes
     - Libraries only
@@ -52,13 +52,13 @@ The code below shows a sample element.
     - Apache 2.0
     - LGPLv3
     - Affero GNU Public License
-    
+
     ## REST
     - n.a.
     - No
     - Yes
     - CoAP
-    
+
     ## Data access control
     - OAuth2
     - Secured access
@@ -73,19 +73,18 @@ The code below shows a sample element.
     - Facebook like privacy settings
     - Fine-grained
     - 2 levels
-    
+
     ## Service discovery
     - No
     - Yes
     - Limited
-    
+
     ## Description
     Default __platform__ description in markdown.
 
 
 ## License
 
-The code is licensed under [MIT], the content (located at `data`) under [CC-BY-SA-4.0].
+The content is licensed under [CC0-1.0].
 
-  [MIT]: https://opensource.org/licenses/MIT
-  [CC-BY-SA-4.0]: http://creativecommons.org/licenses/by-sa/4.0/
+  [CC0-1.0]: https://creativecommons.org/publicdomain/zero/1.0/
